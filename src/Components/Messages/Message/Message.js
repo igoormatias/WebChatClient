@@ -1,9 +1,10 @@
 import React from 'react';
 
-import './Message.css';
 
 import ReactEmoji from 'react-emoji';
 
+
+import {MessageContainer,SentText, MessageText,MessageBox} from './Styles'
 const Message = ({ message: { text, user }, name }) => {
   let isSentByCurrentUser = false;
 
@@ -21,22 +22,23 @@ const Message = ({ message: { text, user }, name }) => {
    
       ? (
        
-        <div className="messageContainer justifyEnd">
-          <p className="sentText pr-10">{user}</p>
-          <div className="messageBox backgroundBlue">
+        <MessageContainer justifyStart>
+          <SentText  styles={{"padding-left": "10px"}}>{user}</SentText>
+          <MessageBox backgroundBlue>
          
-            <p className="messageText colorWhite">{ReactEmoji.emojify(text)}</p>
-          </div>
-        </div>
+            <MessageText colorWhite>{ReactEmoji.emojify(text)}</MessageText>
+          </MessageBox>
+        </MessageContainer>
         )
         : (
-          <div className="messageContainer justifyStart">
-            <div className="messageBox backgroundLight">
+          <MessageContainer>
+            <MessageBox backgroundLight>
             
-              <p className="messageText colorDark">{ReactEmoji.emojify(text)}</p>
-            </div>
-            <p className="sentText pl-10 ">{user}</p>
-          </div>
+              <MessageText colorDark>{ReactEmoji.emojify(text)}</MessageText>
+            </MessageBox>
+            <SentText styles={{"padding-right": "10px"}}>{user}</SentText>
+          </MessageContainer>
+
         )
   );
 }

@@ -4,19 +4,21 @@ import React from 'react';
 import closeIcon from  '../../icons/closeIcon.png'
 import onlineIcon from '../../icons/onlineIcon.png'
 
-import  './InfoBar.css';
+
+import {InfBar,LeftInnerContainer,RightInnerContainer,OnlineIcon} from './Styles'
+
 
 const InfoBar = ({room}) => (
-    <div className="infoBar">
-        <div className="leftInnerContainer">
-            <img className="onlineIcon" src={onlineIcon } alt="online icon"/>
+    <InfBar>
+        <LeftInnerContainer>
+            <OnlineIcon src={onlineIcon } alt="online icon"/>
         <h3>{room}</h3>
-        </div>
-        <div className="rightInnerContainer">
-            <a href="/"><img className="closeIcon" src={closeIcon} alt="close imagem" /></a>
+        </LeftInnerContainer>
+        <RightInnerContainer>
+            <a href="/"><OnlineIcon src={closeIcon} alt="close imagem" /></a>
 
-        </div>
-    </div>
+        </RightInnerContainer>
+    </InfBar>
 )
 
 export default InfoBar;

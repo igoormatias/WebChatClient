@@ -3,12 +3,14 @@ import React, { useState, useEffect } from "react";
 import queryString from 'query-string';
 import io from "socket.io-client";
 
-// 
+
 import Messages from '../Messages/Messages';
 import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 
-import './Chat.css';
+
+
+import {OuterContainer, Container} from './Styles'
 
 let socket;
 
@@ -60,14 +62,14 @@ const Chat = ({ location }) => {
   }
 
   return (
-    <div className="outerContainer">
-      <div className="container">
+    <OuterContainer>
+      <Container>
           <InfoBar room={room} />
           <Messages messages={messages} name={name} />
           <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
-      </div>
+      </Container>
       {/* <TextContainer users={users}/> */}
-    </div>
+    </OuterContainer>
   );
 }
 

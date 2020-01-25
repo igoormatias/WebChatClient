@@ -1,30 +1,8 @@
-import styled , {createGlobalStyle}from 'styled-components';
+import styled from 'styled-components';
 
 
 
-// export default createGlobalStyle 
-// `
-// html, body {
-//     font-family: 'Roboto', sans-serif;
-//     padding: 0;
-//     margin: 0;
-//   }
-  
-//   #root {
-//     height: 100vh;
-//   }
-  
-//   * {
-//     box-sizing: border-box;
-//   }
 
-//   button:focus {
-//     outline: 0;
-//   }
-
-
-//   `
-  
 
 
 export const JoinOuterContainer = styled.div `
@@ -35,22 +13,20 @@ export const JoinOuterContainer = styled.div `
     align-items: center;
    
     background-image: linear-gradient(to bottom,  #1C1C1C,#104E8B);
-
     @media (min-width: 320px) and (max-width: 480px) {
     
       height: 100%;
     }
-      
+    @media (min-width: 320px) and (max-width: 480px) {
+ 
+ width: 90%;
+}
     
 `
 
 export const JoinInnerContainer = styled.div `
-    width: 30%;
-
-    @media (min-width: 320px) and (max-width: 480px) {
- 
-        width: 90%;
-    }
+    width: 40%;
+    
   
   
   
@@ -62,8 +38,8 @@ border-radius: 5px;
 border: none;
 margin-top: 20px;
 padding: 15px 20px;
-width: 100%;
-height: 35px;
+width: 70%;
+height: 10px;
 font-size: 15px;
 color: #010101;
 text-align:center;
@@ -92,16 +68,9 @@ export const Button = styled.button `
     justify-content: center;
     text-align: center;
     border: none;
-    width: 100%;
-    height: 40px;
+    width: 77%;
+    height: 35px;
     margin-top: 20px;
     `
     
    
-    
-
-
-
-    
-  
-  
